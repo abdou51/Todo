@@ -21,6 +21,7 @@ const api = process.env.API_URL;
 app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/todos`, todoRoutes);;
 
+
 //Database
 mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,

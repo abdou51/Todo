@@ -72,9 +72,9 @@ router.post('/login', async (req, res) => {
 
         res.setHeader('Authorization', `Bearer ${token}`);
 
-        res.status(200).send('Login successful');
+        res.status(200).json({ success: true, token: token });
     } else {
-        res.status(400).send('password is wrong!');
+        res.status(400).json('password is wrong!');
     }
 });
 
